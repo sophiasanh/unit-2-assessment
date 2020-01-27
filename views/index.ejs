@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Unit 2 Assesment</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <!-- <script type='text/javascript' /> -->
+    
+  </head>
+ 
+  <body>
+    <h3>TO DO LIST</h3>
+    <% if (todo.length) { %>
+      <table>
+        <!-- <thead>
+          <tr>
+             <th>Date</th>
+            <th>Review</th>
+            <th>Rating</th>
+          </tr>
+        </thead> -->
+        <tbody>
+          <% var total = 0 %>
+          <% todo.forEach(function(t) { %>
+            <% total += todo %>
+            <tr>
+              <td><%= t.todo %></td>
+              <td><%= t.todo %></td>
+              <td><%= t.todo %></td>
+            </tr>
+            <% }); %>
+            <tr>
+              <td colspan="2"></td>
+              <td><strong><%= (total / todo.length).toFixed(1) %></strong></td>
+            </tr>
+        </tbody>
+      </table>
+    <% } else { %>
+      <h5>No To Dos Yet</h5>
+      <% } %>  
+
+<ul>
+    <form id="add-todo-form" action="/index" method="POST">
+      <li>
+        <label>To Do:</label>
+        <input type="text" name="todo"> 
+        <input action="submit" value="Add To Do"><button>Delete To Do</button>
+        <div>Done:</div>
+        <input type="checkbox" name="done" checked />
+      </li>
+      <br></br>
+      <li>
+        <label>To Do:</label>
+        <input type="text" name="todo">
+        <input action="submit" value="Add To Do"><button>Delete To Do</button>
+        <div>Done:</div>
+        <input type="checkbox" name="done" checked />
+      </li>
+      <li>
+        <label>To Do:</label>
+        <input type="text" name="todo">
+        <input action="submit" value="Add To Do"><button>Delete To Do</button>
+        <div>Done:</div>
+          <input type="checkbox" name="done" checked />
+      </li>
+       
+    </form>
+  </ul>   
+
+
+    
+  </div>
+  </body>
+</html>
